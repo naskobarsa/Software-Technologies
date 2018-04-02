@@ -1,0 +1,103 @@
+{#
+   This is the base template used as the application layout which contains the
+   common elements and decorates all the other templates.
+   See http://symfony.com/doc/current/book/templating.html#template-inheritance-and-layouts
+#}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}Calculator{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/Calculator.ico') }}"/>
+</head>
+
+<body id="{% block body_id %}{% endblock %}">
+
+{% block header %}
+    <header>
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="{{ path('index') }}" class="navbar-brand">Калкулатор и още нещо ...</a>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+<div class="container body-container">
+    {% block body %}
+        <div class="row">
+            <div id="main" class="col-sm-12">
+                {% block main %}{% endblock %}
+            </div>
+        </div>
+        <div id="section-content" class="content wrap dirty_white">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header tx_center">
+                        <h2>Господари на Ефира</h2>
+                        <p class="b_center">
+                            Отбрани видеа
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tx_center">
+                        <div class="portfolio-item tx_white">
+                            <img src="img/kadq.jpg" alt="Port 1">
+                            <a href="https://www.youtube.com/watch?v=8ZJHD7GECuM&t=1s" title="От къдя на къдя" class="link_btn" target="_blank">play</a>
+                        </div>
+
+                        <div class="portfolio-item tx_white">
+                            <img src="img/glasuvane.jpg" alt="Port 2">
+                            <a href="https://www.youtube.com/watch?v=ZDzp6D1Buj0&index=5&list=RDvYD-0kZp3E0" title="Нищо не съм куснал" class="link_btn" target="_blank">play</a>
+                        </div>
+
+                        <div class="portfolio-item tx_white">
+                            <img src="img/umrqlma.jpg" alt="Port 3">
+                            <a href="https://www.youtube.com/watch?v=_s9z5D8bkLs&t=131s" title="Ма той умрял ма " class="link_btn" target="_blank">play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="controls tx_center">
+                            <a href="https://www.google.bg/search?q=%D0%B0%D0%BB%D0%B5%D0%BD+%D0%BF%D0%B0%D1%83%D0%BD%D0%BE%D0%B2+%D1%87%D1%83%D1%88%D0%BA%D0%B8&oq=%D0%B0%D0%BB%D0%B5%D0%BD+%D0%BF%D0%B0%D1%83%D0%BD%D0%BE%D0%B2+%D1%87%D1%83%D1%88%D0%BA%D0%B8&aqs=chrome..69i57.25351j0j4&sourceid=chrome&ie=UTF-8" title="Чушки" class="link_btn green" target="_blank">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</div>
+
+{% block footer %}
+    <footer>
+        <div class="container modal-footer">
+            <p class="footer">&copy; 2019 - Calculator "Gospodari na efira"</p>
+            <p class="footer">All Rights Reserved</p>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('js/moment.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>

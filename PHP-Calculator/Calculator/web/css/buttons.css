@@ -1,0 +1,67 @@
+.link_btn {
+	display: inline-block;
+	margin: 0 10px;
+	text-decoration: none;
+	color: #217dbb;
+	padding: 6px 9px;
+	border-radius: 100px;
+	border: 2px solid #217dbb;
+	transition: 0.3s;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	background: #217dbb;
+}
+
+.link_btn:hover,
+.link_btn:focus,
+.link_btn:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+.link_btn:hover {
+	background: #217dbb;
+	border-color: #fff;
+}
+
+.tx_dark .link_btn {
+	border-color: rgb(47,177,180);
+	color: rgb(47,177,180);
+}
+
+
+.tx_dark .link_btn:hover {
+	background: rgb(47,177,180);
+	border-color: #fff;
+	color: #fff;
+}
+
+/* Green */
+
+.link_btn.green {
+	background: transparent;
+	border-color: #217dbb;
+	color: #217dbb;
+}
+
+.link_btn.green:hover {
+	background: #217dbb;
+	border-color: #fff;
+	color: #fff;
+}
+
+/* Price */
+
+.link_btn.price {
+	background: transparent;
+	border-color: #fff;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.link_btn.price:hover {
+	background: #fff;
+	color: #39B4B3;
+}

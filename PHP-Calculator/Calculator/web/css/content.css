@@ -1,0 +1,93 @@
+.content {
+	padding: 100px 0;
+}
+
+/*Backgrounds*/
+
+.dirty_white {
+	background: #f7f7f7;
+}
+
+.content.bg_one {
+	background: url('../img/ready.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.content.bg_kitchen {
+	background: url('../img/qa.jpg') no-repeat bottom center;
+	background-size: cover;
+}
+.content.bg_testimonials {
+	background: url('../img/image52.jpg') no-repeat center center;
+	background-size: cover;
+}
+/*Text Colors*/
+
+.tx_grey {
+	color: #A2A2A2;
+}
+
+.tx_white {
+	color: #fff;
+}
+
+.tx_dark {
+	color: #333;
+}
+
+.tx_block {
+	display: block;
+}
+
+/*Text Control*/
+
+.tx_center {
+	text-align: center;
+}
+
+.tx_small {
+	font-size: 0.7em;
+}
+
+/*Block Control*/
+
+.b_center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content .header h2 {
+	font-size: 2em;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.content .header h2:after {
+	content: '';
+	
+	height: 1px;
+	width: 150px;
+	background: #333;
+	display: block;
+	margin: 20px 0;
+}
+
+.content .tx_center h2:after {
+	margin: 20px auto;
+}
+
+.content.tx_white .header h2:after {
+	background: #fff;
+}
+
+.content  p {
+	max-width: 650px;
+	display: block;
+	margin-bottom: 20px;	
+	font-size: 1em;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	font-family: 'Ubuntu', sans-serif;
+}
+

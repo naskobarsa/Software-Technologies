@@ -1,0 +1,55 @@
+@import url("custom.css");
+@import url("app.css");
+@import url("buttons.css");
+@import url("content.css");
+@import url("portfolio.css");
+
+.well {
+    border: 1px solid #258cd1;
+    max-width: 345px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.navbar-default {
+    background-color: #217dbb;
+}
+
+.btn-primary {
+    background-color: #217dbb;
+    border-color:#e74c3c;
+}
+
+.form-control:focus {
+    border-color:#e74c3c;
+
+}
+
+.form-control {
+    text-align: center;
+}
+
+.reset {
+    float: right;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.spor {
+    text-align: center;
+    width: 25%;
+}
+
+img {
+    width: 25%;
+}
+
+input[type=text] {
+    width: 100% !important;
+}
+
